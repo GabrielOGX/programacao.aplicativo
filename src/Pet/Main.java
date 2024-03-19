@@ -6,7 +6,6 @@ public class Main {
         pet.nome = "Ana";
         pet.especie = "Border Collie";
         pet.idade = 1;
-        pet.exibir();
     }
 
 }
