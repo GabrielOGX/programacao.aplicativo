@@ -1,11 +1,22 @@
 package Funcionario;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Funcionario funcionario = new Funcionario();
-        funcionario.nome = "PiguiMeu";
-        funcionario.departamento= "Compras";
-        funcionario.salario = 3000;
+        Scanner leia = new Scanner(System.in);
+        System.out.println("Nome:");
+        String nome = leia.next();
+        System.out.println("Departamento:");
+        String departamento = leia.next();
+        System.out.println("Salario:");
+        double salario = leia.nextDouble();
+        Funcionario funcionario =
+                new Funcionario(nome,departamento,salario);
+        System.out.println("Digite o novo nome:");
+        nome = leia.next();
+        funcionario.setNome(nome);
+        System.out.println("Novo nome: "+funcionario.getNome());
         funcionario.aumentarSalario(10);
     }
 }
